@@ -5,74 +5,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>land07</title>
-
-    <style> 
-
+    <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
         header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 10px;
-            background-color: darkkhaki;
+            padding: 10px 20px;
+            background-color: white;
         }
 
-        li {
+        .logo img {
+            width: 100px;
+        }
+
+        nav ul {
             display: flex;
-            flex-flow: row nowrap;
+            gap: 20px;
             list-style: none;
-            justify-content: space-around;
+        }
 
-            align-items: center;
+        nav ul li a {
+            text-decoration: none;
+            color: black;
             padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        img {
-            width: 50px;
+        nav ul li a:hover {
+            background-color: orangered;
+            color: white;
+            border-radius: 5px;
         }
 
-        button {
-            background-color: red;
+        .quote-button {
+            background-color: orangered;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .nav {
+        .quote-button a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .quote-button:hover {
+            background-color: aliceblue;
+        }
+
+        .quote-button:hover a {
+            color: black;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1,
+        .hero-content h2 {
+            margin-bottom: 10px;
+        }
+
+        .hero-content input[type="search"] {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .hero-content button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: orangered;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero-content button:hover {
+            background-color: darkorange;
+        }
+
+        .quote-section {
             display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
 
-        .logo {
-            display: flex;
-            gap: 4rem;
+        .quote-info {
+            flex: 1;
+            padding-right: 20px;
         }
 
-        .botao {
-            display: flex;
+        .quote-info h1,
+        .quote-info p {
+            margin-bottom: 10px;
         }
+
+        .quote-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .quote-stats div {
+            text-align: center;
+        }
+
+        .quote-form {
+            flex: 1;
+            padding: 20px;
+            background-color: orange;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .quote-form h2 {
+            margin-bottom: 20px;
+        }
+
+        .quote-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .quote-form input,
+        .quote-form select,
+        .quote-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .quote-form button {
+            background-color: white;
+            color: orange;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .quote-form button:hover {
+            background-color: darkorange;
+            color: white;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="assents/—Pngtree—delivery truck icon design template_4766804.png" />
+            <img src="https://raw.githubusercontent.com/RodrigoNet0/faster-site/main/src/assets/logo.jpeg" alt="Logo">
         </div>
-        <div class="nav">
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Price</li>
-            <li>pages</li>
-            <li>Contact</li>
-        </div>
-        <div class="butao">
-            <button>Quote</button>
-        </div>
+        <nav>
+            <ul>
+                <li class="home"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Price</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="quote-button">
+            <a href="#">Quote</a>
+        </button>
     </header>
+    <div>
+        <img class="hero" src="https://img.ibxk.com.br/2013/5/materias/4426485393141937-o.jpg" alt="hero">
+        <div class="hero-content">
+            <h2>Safe & Faster</h2>
+            <h1>Logistics Services</h1>
+            <input type="search" placeholder="Track your order">
+            <button>Track</button>
+        </div>
+    </div>
+    <div class="quote-section">
+        <div class="quote-info">
+            <p class="">GET AQUOTE</p>
+            <h1>Request A Free Quote</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, natus vitae. Natus eaque vitae
+                consectetur quae, sequi repellendus vel qui voluptate quas ab ducimus, alias at itaque perspiciatis,
+                quisquam odio.</p>
+            <div class="quote-stats">
+                <div>
+                    <h1>225</h1>
+                    <p>Skilled Experts</p>
+                </div>
+                <div>
+                    <h1>1050</h1>
+                    <p>Happy Clients</p>
+                </div>
+                <div>
+                    <h1>2500</h1>
+                    <p>Completed Projects</p>
+                </div>
+            </div>
+        </div>
+        <div class="quote-form">
+            <h2>Request A Quote</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
+                <label for="service">Select Service</label>
+                <select id="service" name="service">
+                    <option value="shipping">Shipping</option>
+                    <option value="warehousing">Warehousing</option>
+                    <option value="consulting">Consulting</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
