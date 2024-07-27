@@ -179,6 +179,61 @@
             color: white;
         }
 
+        .search-conteiner {
+            padding-top: 80px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+          
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+
+        .footer-logo img {
+            width: 80px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin: 10px 0;
+        }
+
+        .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffa500;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .footer-contact a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -201,7 +256,7 @@
             <a href="#">Quote</a>
         </button>
     </header>
-    <div>
+    <div class="search-conteiner">
         <img class="hero" src="https://img.ibxk.com.br/2013/5/materias/4426485393141937-o.jpg" alt="hero">
         <div class="hero-content">
             <h2>Safe & Faster</h2>
@@ -252,6 +307,26 @@
             </form>
         </div>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/RodrigoNet0/faster-site/main/src/assets/logo.jpeg" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>Contact Us:</p>
+                <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+                <p>Phone: <a href="tel:+123456789">+123 456 789</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
